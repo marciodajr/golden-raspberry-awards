@@ -1,10 +1,10 @@
-import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
+import { Injectable, Logger, OnModuleInit, Scope } from '@nestjs/common';
 import { PrismaClient } from '@prisma/client';
 import { MovieDto } from './dto/movie.dto';
 import * as fs from 'fs';
 import * as path from 'path';
 
-@Injectable()
+@Injectable({ scope: Scope.DEFAULT })
 export class ImportMoviesCsvService implements OnModuleInit {
   private readonly logger = Logger;
   private readonly csvDirectory = path.join('src', 'csv');
