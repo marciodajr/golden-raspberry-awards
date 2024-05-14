@@ -21,6 +21,12 @@ git clone git@github.com:marciodajr/golden-raspberry-awards.git
 npm install
 ```
 
+### Generate Prisma Client
+
+```bash
+npx prisma generate
+```
+
 ### Running the app
 
 ```bash
